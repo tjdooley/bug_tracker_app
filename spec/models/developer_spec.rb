@@ -23,4 +23,11 @@ describe Developer do
     long_developer.should_not be_valid
   end
 
+  it "should not destroy a developer assigned to a bug" do
+    developer = Developer.create!(@attr)
+    bug = Bug.create!(:description => "Test bug description", :status => "Open", :developer_id => developer.id)
+    developer.destroy
+    developer.should_not be_destroyed
+  end
+
 end
