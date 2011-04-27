@@ -1,4 +1,5 @@
 class Developer < ActiveRecord::Base
+  attr_accessible :name
   has_many :bugs
 
   validates :name,  :presence => true,

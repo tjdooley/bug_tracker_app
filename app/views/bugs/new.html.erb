@@ -1,0 +1,9 @@
+<h1>Create a new bug</h1>
+
+<%= form_for(@bug) do |f| %>
+  <%= render 'fields', :f => f %>
+  <br>
+  <div class="actions">
+    <%= f.submit "Create bug" %>
+  </div>
+<% end %>

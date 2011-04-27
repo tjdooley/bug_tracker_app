@@ -1,0 +1,9 @@
+<h1>Create a new developer</h1>
+
+<%= form_for(@developer) do |f| %>
+  <%= render 'fields', :f => f %>
+  <br>
+  <div class="actions">
+    <%= f.submit "Add Developer" %>
+  </div>
+<% end %>

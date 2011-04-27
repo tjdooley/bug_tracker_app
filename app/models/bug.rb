@@ -1,4 +1,5 @@
 class Bug < ActiveRecord::Base
+  attr_accessible :description, :status, :developer_id
 
   validates :description, :presence => true, 
                           :length => { :maximum => 200 }

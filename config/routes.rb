@@ -1,4 +1,10 @@
 BugTrackerApp::Application.routes.draw do
+  get "developers/new"
+  get "bugs/new"
+
+  resources :bugs
+  resources :developers
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
