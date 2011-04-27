@@ -4,8 +4,8 @@
   <%= f.text_field :description %>
 </div>
 <div class="field">
-  <%= f.label :status %><br />
-  <%= f.text_field :status %>
+  <%= f.label :status%><br />
+  <%= select( "bug", "status", %w[New In-Progress Testing Closed], {:include_blank => 'None'}) %>
 </div>
 <div class="field">
   <%= f.label :developer_id %><br />

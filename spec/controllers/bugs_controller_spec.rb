@@ -16,7 +16,7 @@ describe BugsController do
 
     it "should have an status field" do
       get :new
-      response.should have_selector("input[name='bug[status]'][type='text']")
+      response.should have_selector("select[name='bug[status]']")
     end
 
     it "should have a developer field" do
