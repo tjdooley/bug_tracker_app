@@ -1,0 +1,13 @@
+<table>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td><%= @bug.description %></td>
+  <tr>
+  <tr>
+    <td><strong>Status</strong></td>
+    <td><%= @bug.status %></td>
+  <tr>
+    <td><strong>Developer</strong></td>
+    <td><%= link_to @developer.name, developer_path(@developer) %></td>
+  </tr>
+</table>

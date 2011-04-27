@@ -13,4 +13,9 @@ class DevelopersController < ApplicationController
     end
   end
 
+  def show
+    @developer = Developer.find(params[:id])
+    @bugs = Bug.where(:developer_id => @developer.id)
+  end
+
 end

@@ -58,12 +58,45 @@ describe BugsController do
         end.should change(Bug, :count).by(1)
       end
 
-      #it "should redirect to the bug show page" do
-      #  post :create, :bug => @attr
-      #  response.should redirect_to(bug_path(assigns(:bug)))
-      #end   
+      it "should redirect to the bug show page" do
+        post :create, :bug => @attr
+        response.should redirect_to(bug_path(assigns(:bug)))
+      end   
+    end
+  end
 
- 
+  describe "GET 'show'" do
+
+    before(:each) do
+      @developer = Factory(:developer)
+      @bug = Factory(:bug)
+    end
+
+    it "should be successful" do
+      get :show, :id => @bug
+      response.should be_success
+    end
+
+    it "should find the right bug" do
+      get :show, :id => @bug
+      assigns(:bug).should == @bug
+    end
+
+    it "should include the bug's description" do
+      get :show, :id => @bug
+      response.should have_selector("td", :content => @bug.description)
+    end
+
+    it "should include the bug's status" do
+      get :show, :id => @bug
+      response.should have_selector("td", :content => @bug.status)
+    end
+
+    it "should have a link to the bug's developer" do
+      get :show, :id => @bug
+      developer_url = "/developers/1"
+      response.should have_selector("a", :href => developer_url,
+                                         :content => @developer.name)
     end
   end
 

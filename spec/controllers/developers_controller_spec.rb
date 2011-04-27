@@ -50,4 +50,39 @@ describe DevelopersController do
     end
   end
 
+  describe "GET 'show'" do
+
+    before(:each) do
+      @developer = Factory(:developer)
+      @bug = Factory(:bug)
+    end
+
+    it "should be successful" do
+      get :show, :id => @developer
+      response.should be_success
+    end
+
+    it "should find the right developer" do
+      get :show, :id => @developer
+      assigns(:developer).should == @developer
+    end
+
+    it "should include the developers's name" do
+      get :show, :id => @developer
+      response.should have_selector("strong", :content => @developer.name)
+    end
+
+    it "should include the developer's bugs" do
+      get :show, :id => @developer
+      response.should have_selector("td", :content => @bug.status)
+    end
+
+    it "should have a link to the developer's bugs" do
+      get :show, :id => @developer
+      bug_url = "/bugs/1"
+      response.should have_selector("a", :href => bug_url,
+                                         :content => @bug.description)
+    end
+  end
+
 end
