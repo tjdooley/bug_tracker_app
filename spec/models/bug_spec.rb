@@ -4,6 +4,7 @@ describe Bug do
   
   before(:each) do
     @attr = { 
+      :title => "Bug Title",
       :description => "Test bug description",
       :status => "Open",
       :developer_id => 1
@@ -12,6 +13,11 @@ describe Bug do
 
   it "should create a new instance given valid attributes" do
     Bug.create!(@attr)
+  end
+
+  it "should require a title" do 
+    no_title_bug = Bug.new(@attr.merge(:title => ""))
+    no_title_bug.should_not be_valid
   end
 
   it "should require a description" do 
@@ -27,6 +33,12 @@ describe Bug do
   it "should require a developer id" do 
     no_description_bug = Bug.new(@attr.merge(:status => ""))
     no_description_bug.should_not be_valid
+  end
+
+  it "should reject titles that are too long" do
+    long_title = "a" * 51
+    long_title_bug = Bug.new(@attr.merge(:title => long_title))
+    long_title_bug.should_not be_valid
   end
 
   it "should reject descriptions that are too long" do

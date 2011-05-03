@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110420004814) do
+ActiveRecord::Schema.define(:version => 20110502005806) do
 
   create_table "bugs", :force => true do |t|
     t.string   "description"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(:version => 20110420004814) do
     t.integer  "developer_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "title"
   end
 
   create_table "developers", :force => true do |t|

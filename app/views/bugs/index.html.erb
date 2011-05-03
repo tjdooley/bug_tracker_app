@@ -1,0 +1,17 @@
+<h1>All bugs</h1>
+
+<%= will_paginate %>
+
+<table class="bugs" border="1">
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Status</th>
+    <th>Assigned Developer</th>
+  </tr>
+  <%= render @bugs %>
+</table>
+
+<%= will_paginate %>
+
+

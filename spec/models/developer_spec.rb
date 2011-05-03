@@ -25,7 +25,7 @@ describe Developer do
 
   it "should not destroy a developer assigned to a bug" do
     developer = Developer.create!(@attr)
-    bug = Bug.create!(:description => "Test bug description", :status => "Open", :developer_id => developer.id)
+    bug = Bug.create!(:title => "Title", :description => "Test bug description", :status => "Open", :developer_id => developer.id)
     developer.destroy
     developer.should_not be_destroyed
   end

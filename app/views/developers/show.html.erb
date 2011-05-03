@@ -1,12 +1,12 @@
 <strong>Assigned bugs for <%= @developer.name %></strong><br /><br />
 <table class="bug" border="1">
   <tr>
-    <th>Description</th>
+    <th>Title</th>
     <th>Status</th>
   </tr>
   <% @bugs.each do |bug| %>
     <tr>
-      <td><%= link_to bug.description, bug_path(@bug) %></td>
+      <td><%= link_to bug.title, bug_path(bug) %></td>
       <td><%= bug.status %></td>
     </tr>
   <% end %>
