@@ -6,7 +6,7 @@
     <td><%= @developer.name %></td>
   <tr>
 </table>
-<%= link_to "Edit", edit_developer_path(@developer) %>  <%= link_to "Delete", @developer, :method => :delete %>
+<%= link_to "Edit", edit_developer_path(@developer) %> | <%= link_to "Delete", @developer, :method => :delete %> | <%= link_to "Back to developer list", developers_path() %>
 
 <br><br>Bugs assigned to <%= @developer.name %>
 <table class="bug" border="1">

@@ -16,6 +16,4 @@
   </tr>
 </table>
 <br><br>
-<%= link_to "Edit Bug", edit_bug_path(@bug) %>
-<br><br>
-<%= link_to "Delete Bug", @bug, :method => :delete %>
+<%= link_to "Edit Bug", edit_bug_path(@bug) %> | <%= link_to "Delete Bug", @bug, :method => :delete %> | <%= link_to "Back to bug list", bugs_path() %>

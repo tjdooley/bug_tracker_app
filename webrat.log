@@ -1,0 +1,39 @@
+# Logfile created on 2011-05-03 19:25:47 -0500 by logger.rb/25413
+REQUESTING PAGE: GET /newbug with {} and HTTP headers {}
+REQUESTING PAGE: POST /bugs with {"utf8"=>"\xE2\x9C\x93", "bug"=>{"title"=>"", "description"=>"", "status"=>"", "developer_id"=>""}, "commit"=>"Create bug"} and HTTP headers {"HTTP_REFERER"=>"/newbug"}
+REQUESTING PAGE: GET /newbug with {} and HTTP headers {}
+REQUESTING PAGE: POST /bugs with {"utf8"=>"\xE2\x9C\x93", "bug"=>{"title"=>"", "description"=>"", "status"=>"", "developer_id"=>""}, "commit"=>"Create bug"} and HTTP headers {"HTTP_REFERER"=>"/newbug"}
+REQUESTING PAGE: GET /newbug with {} and HTTP headers {}
+REQUESTING PAGE: POST /bugs with {"utf8"=>"\xE2\x9C\x93", "bug"=>{"title"=>"", "description"=>"", "status"=>"", "developer_id"=>""}, "commit"=>"Create bug"} and HTTP headers {"HTTP_REFERER"=>"/newbug"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /newbug with {} and HTTP headers {}
+REQUESTING PAGE: POST /bugs with {"utf8"=>"\xE2\x9C\x93", "bug"=>{"title"=>"", "description"=>"", "status"=>"", "developer_id"=>""}, "commit"=>"Create bug"} and HTTP headers {"HTTP_REFERER"=>"/newbug"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /newbug with {} and HTTP headers {}
+REQUESTING PAGE: POST /bugs with {"utf8"=>"\xE2\x9C\x93", "bug"=>{"title"=>"", "description"=>"", "status"=>"", "developer_id"=>""}, "commit"=>"Create bug"} and HTTP headers {"HTTP_REFERER"=>"/newbug"}
+REQUESTING PAGE: GET /newbug with {} and HTTP headers {}
+REQUESTING PAGE: GET /newbug with {} and HTTP headers {}
+REQUESTING PAGE: POST /bugs with {"utf8"=>"\xE2\x9C\x93", "bug"=>{"title"=>"", "description"=>"", "status"=>"", "developer_id"=>""}, "commit"=>"Create bug"} and HTTP headers {"HTTP_REFERER"=>"/newbug"}
+REQUESTING PAGE: GET /newbug with {} and HTTP headers {}
+REQUESTING PAGE: POST /bugs with {"utf8"=>"\xE2\x9C\x93", "bug"=>{"title"=>"New title", "description"=>"New description", "status"=>"New", "developer_id"=>"1"}, "commit"=>"Create bug"} and HTTP headers {"HTTP_REFERER"=>"/newbug"}
+REQUESTING PAGE: GET http://www.example.com/bugs/1 with {} and HTTP headers {"HTTP_REFERER"=>"/bugs"}
+REQUESTING PAGE: GET /newbug with {} and HTTP headers {}
+REQUESTING PAGE: POST /bugs with {"utf8"=>"\xE2\x9C\x93", "bug"=>{"title"=>"", "description"=>"", "status"=>"", "developer_id"=>""}, "commit"=>"Create bug"} and HTTP headers {"HTTP_REFERER"=>"/newbug"}
+REQUESTING PAGE: GET /newbug with {} and HTTP headers {}
+REQUESTING PAGE: POST /bugs with {"utf8"=>"\xE2\x9C\x93", "bug"=>{"title"=>"New title", "description"=>"New description", "status"=>"New", "developer_id"=>"1"}, "commit"=>"Create bug"} and HTTP headers {"HTTP_REFERER"=>"/newbug"}
+REQUESTING PAGE: GET http://www.example.com/bugs/1 with {} and HTTP headers {"HTTP_REFERER"=>"/bugs"}
+REQUESTING PAGE: GET /newbug with {} and HTTP headers {}
+REQUESTING PAGE: POST /bugs with {"utf8"=>"\xE2\x9C\x93", "bug"=>{"title"=>"", "description"=>"", "status"=>"", "developer_id"=>""}, "commit"=>"Create bug"} and HTTP headers {"HTTP_REFERER"=>"/newbug"}
+REQUESTING PAGE: GET /newbug with {} and HTTP headers {}
+REQUESTING PAGE: POST /bugs with {"utf8"=>"\xE2\x9C\x93", "bug"=>{"title"=>"New title", "description"=>"New description", "status"=>"New", "developer_id"=>"1"}, "commit"=>"Create bug"} and HTTP headers {"HTTP_REFERER"=>"/newbug"}
+REQUESTING PAGE: GET http://www.example.com/bugs/1 with {} and HTTP headers {"HTTP_REFERER"=>"/bugs"}
+REQUESTING PAGE: GET developers/new with {} and HTTP headers {}
+REQUESTING PAGE: POST /developers with {"utf8"=>"\xE2\x9C\x93", "developer"=>{"name"=>""}, "commit"=>"Add Developer"} and HTTP headers {"HTTP_REFERER"=>"developers/new"}
+REQUESTING PAGE: GET developers/new with {} and HTTP headers {}
+REQUESTING PAGE: POST /developers with {"utf8"=>"\xE2\x9C\x93", "developer"=>{"name"=>"New developer"}, "commit"=>"Add Developer"} and HTTP headers {"HTTP_REFERER"=>"developers/new"}
+REQUESTING PAGE: GET http://www.example.com/developers/1 with {} and HTTP headers {"HTTP_REFERER"=>"/developers"}
+REQUESTING PAGE: GET /newdeveloper with {} and HTTP headers {}
+REQUESTING PAGE: POST /developers with {"utf8"=>"\xE2\x9C\x93", "developer"=>{"name"=>""}, "commit"=>"Add Developer"} and HTTP headers {"HTTP_REFERER"=>"/newdeveloper"}
+REQUESTING PAGE: GET /newdeveloper with {} and HTTP headers {}
+REQUESTING PAGE: POST /developers with {"utf8"=>"\xE2\x9C\x93", "developer"=>{"name"=>"New developer"}, "commit"=>"Add Developer"} and HTTP headers {"HTTP_REFERER"=>"/newdeveloper"}
+REQUESTING PAGE: GET http://www.example.com/developers/1 with {} and HTTP headers {"HTTP_REFERER"=>"/developers"}
