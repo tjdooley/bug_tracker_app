@@ -15,3 +15,7 @@
     <td><%= link_to @developer.name, developer_path(@developer) %></td>
   </tr>
 </table>
+<br><br>
+<%= link_to "Edit Bug", edit_bug_path(@bug) %>
+<br><br>
+<%= link_to "Delete Bug", @bug, :method => :delete %>

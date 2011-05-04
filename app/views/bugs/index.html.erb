@@ -2,7 +2,7 @@
 
 <%= will_paginate %>
 
-<table class="bugs" border="1">
+<table border="1">
   <tr>
     <th>Title</th>
     <th>Description</th>
@@ -10,6 +10,9 @@
     <th>Assigned Developer</th>
   </tr>
   <%= render @bugs %>
+  <tr>
+    <td><%= link_to "Add New Bug", newbug_path %></td>
+  </tr>
 </table>
 
 <%= will_paginate %>

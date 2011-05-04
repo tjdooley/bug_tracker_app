@@ -1,4 +1,14 @@
-<strong>Assigned bugs for <%= @developer.name %></strong><br /><br />
+<h1>Developer Information</h1>
+
+<table>
+  <tr>
+    <td><strong>Name</strong></td>
+    <td><%= @developer.name %></td>
+  <tr>
+</table>
+<%= link_to "Edit", edit_developer_path(@developer) %>  <%= link_to "Delete", @developer, :method => :delete %>
+
+<br><br>Bugs assigned to <%= @developer.name %>
 <table class="bug" border="1">
   <tr>
     <th>Title</th>

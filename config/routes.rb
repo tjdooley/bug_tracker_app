@@ -5,6 +5,12 @@ BugTrackerApp::Application.routes.draw do
   resources :bugs
   resources :developers
 
+  match '/newbug', :to => 'bugs#new'
+  match '/newdeveloper', :to => 'developers#new'
+  match '/about',   :to => 'pages#about'
+  match '/home',   :to => 'pages#home'
+
+  root :to => 'pages#home'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
