@@ -5,5 +5,5 @@
   <!--Update this to not query every row -->
   <% developer = Developer.find(bug.developer_id) %>
   <td><%= link_to developer.name, developer_path(developer) %></td>
-  <td><%= link_to "Delete", bug, :method => :delete %></td>
+  <td><%= link_to 'Delete', bug, :confirm => 'Are you sure?', :method => :delete %></td>
 </tr>

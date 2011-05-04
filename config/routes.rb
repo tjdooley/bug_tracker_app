@@ -1,6 +1,4 @@
 BugTrackerApp::Application.routes.draw do
-  get "developers/new"
-  get "bugs/new"
 
   resources :bugs
   resources :developers
