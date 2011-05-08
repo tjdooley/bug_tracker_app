@@ -8,13 +8,12 @@
     <th>Description</th>
     <th>Status</th>
     <th>Assigned Developer</th>
+    <th>Action</th>
   </tr>
   <%= render @bugs %>
-  <tr>
-    <td><%= link_to "Add New Bug", newbug_path %></td>
-  </tr>
 </table>
 
 <%= will_paginate %>
-
+<br>
+<%= link_to "Add New Bug", newbug_path %>
 

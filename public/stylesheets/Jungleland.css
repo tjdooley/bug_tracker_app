@@ -111,7 +111,8 @@ strong {	font-weight: bold; }
 /* start - table */
 table {
 	border-collapse: collapse;
-	margin: 10px 20px;		
+	margin-left:auto; 
+	margin-right:auto;
 }
 tr { background: #130d0a }
 th, td {

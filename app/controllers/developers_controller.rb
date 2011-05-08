@@ -28,10 +28,10 @@ class DevelopersController < ApplicationController
     if @developer.destroyed?
       flash[:success] = "Developer destroyed."
       redirect_to developers_path
+    else
+      flash[:error] = "Developer could not be destroyed since they have assigned bugs."
+      redirect_to developer_path(@developer)
     end
-
-    flash[:error] = "Developer could not be destroyed since they have assigned bugs."
-    redirect_to developer_path(@developer)
   end
 
   def edit
