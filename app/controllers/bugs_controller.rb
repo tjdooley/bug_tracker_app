@@ -1,5 +1,5 @@
+#Controller that manages actions related to bugs
 class BugsController < ApplicationController
-  
   def new
     @bug = Bug.new
   end

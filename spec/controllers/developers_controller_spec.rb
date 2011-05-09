@@ -69,7 +69,7 @@ describe DevelopersController do
 
     it "should include the developers's name" do
       get :show, :id => @developer
-      response.should have_selector("strong", :content => @developer.name)
+      response.should have_selector("td", :content => @developer.name)
     end
 
     it "should include the developer's bugs" do
@@ -142,6 +142,14 @@ describe DevelopersController do
     it "should redirect to the developers page" do
       delete :destroy, :id => @developer
       response.should redirect_to(developers_path)
+    end
+
+    it "should not delete a developer with assigned bugs" do
+      bug = Bug.create!(:title => "Title", :description => "Test bug description", :status => "Open", :developer_id => @developer.id)
+      lambda do
+        delete :destroy, :id => @developer
+      end.should change(Developer, :count).by(0)
+      response.should redirect_to(developer_path(@developer))
     end
   end
 

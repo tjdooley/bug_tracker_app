@@ -1,3 +1,4 @@
+#Model for developer record
 class Developer < ActiveRecord::Base
   attr_accessible :name
   attr_accessor :destroyed
@@ -8,8 +9,6 @@ class Developer < ActiveRecord::Base
 
   before_destroy :check_associated_bugs
   after_destroy :mark_as_destroyed
-
-  
 
   private
     def check_associated_bugs

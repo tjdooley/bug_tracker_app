@@ -1,5 +1,5 @@
+#Controller that manages actions involving developers
 class DevelopersController < ApplicationController
-  
   def new
     @developer = Developer.new
   end
