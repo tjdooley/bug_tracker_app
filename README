@@ -1,3 +1,28 @@
 # Bug tracker application
 
 This is an application for my final project for the Rails class.
+
+Application description
+------------------------
+The navigation for the app is pretty simple.  The home page contains links to two lists, one for bugs and one for developers.
+
+The bugs index page contains a list of bugs.  It will display a title, description, status, and an assigned developer.  Each bug can be deleted from this page.  Each row also contains a link to the currently assigned developer information.  New bugs can be created from this page as well.
+
+The title of each bug is a link to detailed bug information.  From that page, the bug can be deleted or edited.  Creating a new bug or editing will validate the same rules.  All bugs must have a title, description, status, and assigned developer.  This is validated using a jQuery validator and also from the controller.
+
+The developer list follows the same pattern.  The list of developers contains their name (which is a required field).  Clicking on the name the will give more detailed information.  In this case it's just the name, along with a list of all bugs currently assigned to the developer.  Developers can also be edited and deleted from their information page.  There is one restriction to deletion, a developer can not be deleted if they have any assigned bugs.
+
+
+Technical description
+----------------------
+There are two tables in the application, Bugs and Developers.  The Bugs table has 4 required fields (Title, Description, Status and Developer_id).  Title and status have a 50 character maximum, description is 200.
+
+Developers only contains a name field, which is required and has a 50 character maximum.  The Developer model contains code to enforce the requirement that developers can not be deleted if they have assigned bugs. 
+
+The Bugs and Developers controller contains pretty standard code that covers all CRUD functionality for each.  There is also a Pages controller to handle display of the Home and About pages.
+
+The view code contains different pages for the different CRUD functionality.  I tried to consolidate as common functionality as I could into shared files.
+
+I added jQuery to the project as well.  I decided to use the Validator plugin.  The create/edit pages for bugs and controllers will do validation on the page, so that the user will get validation feedback without reloading the page.
+
+Some other functionality I added, which won't be apparent from using the application, is using metric_fu (metric-fu.rubyforge.org).  It is a set of Rake tasks that generate various metric reports.  Running rake metrics:all will create a metric_fu folder in the tmp directory.  I used some of these reports to try and improve the code base, although there's still a ways to go.
